@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration Form</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function validate()
+		{
+		f=0;
+		re = /^[A-Za-z_]+$/;
+		if(document.reg.phnum.value.length!=10)
+		{
+		 window.alert('Phone number not valid!');
+		 //document.reg.phnum.value = 0;
+		document.reg.pass1.value = 0;
+		f=1;
+		}
+		var x=document.forms["reg"]["email"].value;
+		var atpos=x.indexOf("@");
+		var dotpos=x.lastIndexOf(".");
+		if(atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+		{
+		 window.alert("Invalid email!");
+		 //document.forms["reg"]["email"].value = 0;
+		document.reg.pass1.value = 0;
+		f=1;
+		}
+		if(document.reg.pass1.value.length<=6)
+		{
+		 window.alert('Password is too short!');
+		document.reg.pass1.value = 0;
+		f=1;
+		}
+		if(document.reg.pass1.value!=document.reg.pass2.value)
+		{
+			window.alert("Password mismathced!!");
+			document.reg.pass1.value = 0;
+			f=1;
+		}
+		if(f==1)
+			window.alert("Your Data is Not saved!!");
+		else
+			window.alert("Your Data is saved!!");
+		}
+		function check()
+		{
+			f=0;
+			if(document.log.pass.value.length<=6)
+		{
+		 window.alert('Password is too short!');
+		document.reg.pass.value = 0;
+		f=1;
+		}
+		if(f==1)
+			window.alert("Invalid details!!");
+		}
+		
+</script>
+
+</head>
+<body>
+	<div class="hero">
+		<div class="form-box">
+		<div class="button-box">
+			<div id="btn"></div>
+	<button type="button" class="toggle-btn" onclick="login()">Log in</button>
+	<button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+        
+        <div class="social-icons">
+        	<a href="https://www.facebook.com/"><img src="images/fb.png"></a>
+        	<a href="https://twitter.com/home"><img src="images/tw.png"></a>
+        	<a href="https://mail.google.com/mail/u/0/"><img src="images/gp.png"></a>
+        </div>
+        
+        <form class="input-group" method="POST" name="log" id="login" onsubmit="return check()" action="validation.php">
+        <div class="input-icons">
+        		<i class="fa fa-envelope icon">
+              </i>  
+        	<input type="email" name="email" class="input-field" placeholder="Email ID" required>
+       </div> 
+       <div class="input-icons">
+        	<i class="fa fa-key icon"></i> 
+        	<input type="Password" name="pass" class="input-field" placeholder="Enter Password" required>
+        </div>
+        <div>
+        	<input type="checkbox" class="check-box" required><span>Remember Password</span>
+        </div>
+        	<button type="submit" class="submit-btn">Log in</button>
+        </form>
+        <form  class="input-group" method="POST" id="register" name="reg" onsubmit="return validate()" action="insertion.php" >
+        	<!-- <input type="text" class="input-field" placeholder="USER ID" required> -->
+        	<!-- <input type="text" name="username" class="input-field" placeholder="Enter your name" required> -->
+        	<div class="input-icons">
+        	<i class="fa fa-user"></i>
+        	<input type="text" name="username" class="input-field" placeholder="Username" required>
+        </div>
+        	<div class="input-icons">
+        	<i class="fa fa-phone"></i>
+        	<input type="number" name="phnum" class="input-field" placeholder="Phone number" required>
+        </div>
+        <div class="input-icons">
+        	 <i class="fa fa-envelope icon">
+              </i> 
+        	<input type="email" name="email1" class="input-field" placeholder="Email ID" required>
+        </div>
+        <div class="input-icons">
+        	<i class="fa fa-key icon">
+              </i>
+        	<input type="Password" name="pass1" class="input-field" placeholder="Enter Password" required>
+        </div>
+        <div class="input-icons">
+        	 <i class="fa fa-key icon">
+              </i> 
+        	<input type="Password" name="pass2" class="input-field" placeholder="Re-enter Password" required>
+        </div>
+        <div>
+        	<input type="checkbox" class="check-box" required><span>I agree to the terms and conditions</span>
+        	<button type="submit" class="submit-btn">Register</button>
+        </div>
+        </form>
+    </div>
+</div>
+<script>
+	var x=document.getElementById("login");
+	var y=document.getElementById("register");
+	var z=document.getElementById("btn");
+
+
+	function register()
+	{
+		x.style.left="-400px";
+		y.style.left="50px";
+		z.style.left="110px"
+	}
+
+	function login()
+	{
+		x.style.left="50px";
+		y.style.left="450px";
+		z.style.left="0"
+	}
+</script>
+</body>
+</html>

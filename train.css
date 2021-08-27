@@ -1,0 +1,219 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.header
+{
+	height: 100%;
+	background-image: url('images/fau.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	text-align: center;
+   
+}
+@media (max-width: 900px) 
+{
+    #hotim
+    {
+       height: 600px;
+    }
+    h1{
+    	font-size: 0.5em;
+    	text-align: center;
+    }
+    .header
+	 {
+		height: 100%;
+		background-image: url('images/fau.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		text-align: left;
+	   
+	 }
+ }
+.header img
+{
+	width: 120px;
+	float: left;
+
+}
+.header h1
+{
+	padding: 150px;
+	padding-bottom:0px;
+	font-size: 60px;
+	color: white;
+	padding-left: 300px;
+}
+.input-group
+{
+	width:100% ;
+	max-width: 500px;
+	border-radius: 50px;
+	background: #fff;
+	margin: auto;
+	padding: 6px;
+
+}
+.form-control
+{
+	border: 0;
+	border-radius: 50px;
+	margin: 2px;
+    box-shadow: none;
+}
+/*features*/
+
+
+
+.features
+{
+   padding :100px;
+   background-color:whitesmoke;
+}
+.features h1
+{
+text-align:center;
+padding: 50px;
+}
+.k
+{
+	width: 105%;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+
+}
+.feature-box
+{
+	box-shadow:0 0 10px 1px rgba(37,73,214,0.18);
+	margin-bottom: 30px;
+}
+.price
+{
+
+}
+.rating
+{
+
+}
+.Gallery
+{
+	padding: 100px 0;
+	background-color: lightgrey;
+
+}
+.Gallery 
+{
+	text-align: center;
+	padding: 100px;
+}
+.Gallery h1
+{
+	padding-bottom: 50px;
+}
+.gallery-box img
+{
+	width:100%;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 2s;
+}
+.gallery-box:hover
+{
+	transform: scale(1.1);
+}
+
+
+/*nextsection */
+
+.banner
+{
+	height:80% ;
+	background-image: url('images/sk.jpg');
+	background-position: center;
+	background-size: cover;
+    padding-top: 14%;
+    box-shadow:0 0 10px 1px rgba(37,73,214,0.18); ;
+}
+.banner-highlight
+{
+	padding: 50px 0;
+	background: rgba(0,0,0,0.7);
+	text-align: center;
+	color: white;
+	
+
+}
+.booking-btn
+{
+	width: 100px;
+	padding: 8px 0;
+	outline: none !important;
+	border: 2px solid #fff;
+	border-radius: 50px;
+	color:white;
+	float: right;
+	background:transparent;
+	margin-top:20px ;
+}
+
+.users-feedback
+{
+	padding:100px;
+
+}
+.users-review
+{
+text-align: center;
+box-shadow: 0 0 10px 0 rgba(0,0 ,100,0.2);
+padding-bottom: 10px;
+padding: 10px;
+}
+.users-review p
+{
+   padding: 50px 10px 10px 10px;
+
+}
+.users-feedback img 
+{
+width: 60px;
+height: 60px;
+border-radius: 100%;
+position: relative;
+
+}
+.footer
+{
+	padding: 100px 20px;
+	background-image: linear-gradient(skyblue,grey);
+	color: white;
+
+}
+.footer img
+{
+	width:30%;
+
+}
+.footer-logo
+{
+	width: 150px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.footer h4
+{
+	text-align: left;
+	margin-top: 15px;
+	margin-bottom: 25px;
+
+}
+.footer p
+{
+	font-size: 12px;
+	text-align: justify;
+	padding-right: 35px;
+
+}
